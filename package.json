@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/lyndon-learn/node-learn#readme",
   "devDependencies": {
-    "@types/node": "^17.0.35"
+    "@types/node": "^17.0.35",
+    "mockjs": "^1.1.0"
+  },
+  "dependencies": {
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.1"
   }
 }
