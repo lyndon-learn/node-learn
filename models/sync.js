@@ -2,6 +2,7 @@ require("./Admin");
 require("./Book");
 require("./Class");
 require("./Student");
+require("./relation");
 
 const sequelize = require("./db");
 

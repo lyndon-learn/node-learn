@@ -28,3 +28,24 @@ exports.updateAdmin = async (adminId, adminObj) => {
   });
   return result;
 };
+
+exports.login = async (loginId, loginPwd) => {
+  const result = Admin.findOne({
+    where: {
+      loginId,
+      loginPwd,
+    },
+  });
+  if (result && result.loginId === loginId && result.loginPwd === loginPwd) {
+    return result.toJSON();
+  }
+  return null;
+};
+
+exports.getAdminById = async (adminId) => {
+  const ins = await Admin.findByPk(adminId);
+  if (ins) {
+    return ins.toJSON();
+  }
+  return null;
+};

@@ -1,6 +1,6 @@
 // 设置模型关系
-const Class = require("../models/Class");
-const Student = require("../models/Student");
+const Class = require("./Class");
+const Student = require("./Student");
 
 Class.hasMany(Student);
 Student.belongsTo(Class);
