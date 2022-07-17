@@ -1,16 +1,15 @@
 const sequelize = require("./db");
 const { DataTypes } = require("sequelize");
 
-const Book = sequelize.define(
+module.exports = sequelize.define(
   "Book",
   {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    imgUrl: {
+    imgurl: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     publishDate: {
       type: DataTypes.STRING,
@@ -22,10 +21,6 @@ const Book = sequelize.define(
     },
   },
   {
-    createdAt: false,
-    updatedAt: false,
     paranoid: true,
   }
 );
-
-module.exports = Book;

@@ -1,12 +1,11 @@
+// 同步所有模型
 require("./Admin");
 require("./Book");
 require("./Class");
 require("./Student");
-require("./relation");
 
 const sequelize = require("./db");
 
-(async function () {
-  await sequelize.sync({ alter: true });
-  console.log("所有模型均已成功同步.");
-})();
+sequelize.sync({ alter: true }).then(() => {
+  console.log("所有模型同步完成");
+});

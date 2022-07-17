@@ -1,10 +1,11 @@
 {
-  "name": "learn",
+  "name": "node-learn",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js"
+    "start": "nodemon -x npm run server",
+    "server": "node index"
   },
   "repository": {
     "type": "git",
@@ -17,16 +18,19 @@
   },
   "homepage": "https://github.com/lyndon-learn/node-learn#readme",
   "devDependencies": {
-    "@types/node": "^17.0.35",
-    "mockjs": "^1.1.0"
+    "@types/node": "^13.9.3",
+    "nodemon": "^2.0.3"
   },
   "dependencies": {
-    "axios": "^0.27.2",
-    "cheerio": "^1.0.0-rc.12",
-    "md5": "^2.3.0",
-    "moment": "^2.29.3",
-    "mysql2": "^2.3.3",
-    "sequelize": "^6.21.1",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "log4js": "^6.2.0",
+    "md5": "^2.2.1",
+    "mockjs": "^1.1.0",
+    "moment": "^2.24.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.5",
     "validate.js": "^0.13.1"
   }
 }

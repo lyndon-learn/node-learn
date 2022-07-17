@@ -1,1 +1,1 @@
-require("./models/sync");
+require("./init");
